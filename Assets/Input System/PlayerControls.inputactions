@@ -114,6 +114,34 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "Debug",
+            "id": "617f8ba7-6191-4c40-a90c-ff34bd25b49b",
+            "actions": [
+                {
+                    "name": "SpawnCustomer",
+                    "type": "Button",
+                    "id": "fd10e1cf-119c-4653-a0f7-44670f1a4d04",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "27dc3524-cfb9-4594-b7fc-d1dfe46848a9",
+                    "path": "<Keyboard>/l",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SpawnCustomer",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": []
