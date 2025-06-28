@@ -10,11 +10,14 @@ public class CustomerManager : MonoBehaviour
     private HashSet<int> occupiedTables = new HashSet<int>();
 
     private PlayerControls controls;
+    private Transform currentCustomersParent;
 
     void Awake()
     {
         controls = new PlayerControls();
         controls.Debug.SpawnCustomer.performed += ctx => SpawnCustomer();
+
+        currentCustomersParent = GameObject.Find("Current Customers").transform;
     }
 
     void OnEnable() => controls.Enable();
@@ -35,6 +38,7 @@ public class CustomerManager : MonoBehaviour
         spriteRenderer.sortingLayerName = "Environment";
 
         newCustomer.transform.position = spawnPoint.position;
+        newCustomer.transform.SetParent(currentCustomersParent);
 
         int randomTableIndex;
         do

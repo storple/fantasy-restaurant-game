@@ -5,7 +5,7 @@ public class CustomerAI : MonoBehaviour
     public float speed = 2f;
     private Vector3 targetPos;
     private bool isWalking = false;
-    private int tableIndex; // Track assigned table index
+    private int tableIndex;
 
     public void MoveTo(Vector3 destination, int tableIndex)
     {
@@ -34,8 +34,5 @@ public class CustomerAI : MonoBehaviour
         // sit down logic and animation here
     }
 
-    void OnDestroy()
-    {
-        Object.FindFirstObjectByType<CustomerManager>().FreeTable(tableIndex);
-    }
+
 }
