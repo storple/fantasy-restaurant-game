@@ -1,4 +1,4 @@
-using System;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -9,6 +9,9 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Player Settings")]
     [SerializeField] float moveSpeed = 3f;
+
+    [Header("Controller Movement")]
+    [SerializeField] float deadZone = 0.1f;
 
     [Header("Sprites")]
     public Sprite forwardSprite;
@@ -51,6 +54,13 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+        // make sure movement values are binary (0 or 1)
+        Vector2 adjustedMovement = new Vector2(
+            Mathf.Abs(movement.x) > deadZone ? Mathf.Sign(movement.x) : 0,
+            Mathf.Abs(movement.y) > deadZone ? Mathf.Sign(movement.y) : 0
+        );
+        adjustedMovement = adjustedMovement.normalized;
+
+        rb.MovePosition(rb.position + adjustedMovement * moveSpeed * Time.fixedDeltaTime);
     }
 }
