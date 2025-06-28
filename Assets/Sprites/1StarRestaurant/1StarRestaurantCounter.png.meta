@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 8c4a9bca31537914686f10a1c0df94d4
+guid: 753f6cde2a3b5a74890b97e1aa06910b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2018255162231593255
-    second: player_left_0
+      213: 5176593237730156938
+    second: 1StarRestaurantCounter_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -101,7 +101,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: player_left_0
+      name: 1StarRestaurantCounter_0
       rect:
         serializedVersion: 2
-        x: 14
-        y: 1
-        width: 38
-        height: 48
+        x: 70
+        y: 116
+        width: 235
+        height: 37
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 72999ea7068420c10800000000000000
-      internalID: 2018255162231593255
+      spriteID: a8168997f14f6d740800000000000000
+      internalID: 5176593237730156938
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      player_left_0: 2018255162231593255
+      1StarRestaurantCounter_0: 5176593237730156938
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
