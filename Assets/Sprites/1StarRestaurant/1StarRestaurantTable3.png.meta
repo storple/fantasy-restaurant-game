@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 8c4a9bca31537914686f10a1c0df94d4
+guid: ae4d641c84071c94cb9f2c478108b804
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2018255162231593255
-    second: player_left_0
+      213: 8659804989800739004
+    second: 1StarRestaurantTable3_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -101,7 +101,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -113,23 +113,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: player_left_0
+      name: 1StarRestaurantTable3_0
       rect:
         serializedVersion: 2
-        x: 17
-        y: 1
-        width: 38
-        height: 48
+        x: 0
+        y: 2
+        width: 48
+        height: 44
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 72999ea7068420c10800000000000000
-      internalID: 2018255162231593255
+      spriteID: cb07a31b1cecd2870800000000000000
+      internalID: 8659804989800739004
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 19c27d8fe7dce7b48864444797f8ecae
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      player_left_0: 2018255162231593255
+      1StarRestaurantTable3_0: 8659804989800739004
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
