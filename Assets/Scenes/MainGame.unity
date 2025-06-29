@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 48675328}
   - component: {fileID: 48675327}
   m_Layer: 5
-  m_Name: Pause Menu
+  m_Name: Pause Buttons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -581,14 +581,14 @@ Transform:
   m_GameObject: {fileID: 431246356}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.492, y: -0.41499996, z: 0}
+  m_LocalPosition: {x: -0.0020000935, y: 1.075, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1122283241}
   - {fileID: 2019618076}
   - {fileID: 1613295507}
-  m_Father: {fileID: 1824915916}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
@@ -1035,6 +1035,7 @@ GameObject:
   - component: {fileID: 879375383}
   - component: {fileID: 879375382}
   - component: {fileID: 879375384}
+  - component: {fileID: 879375385}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1083,8 +1084,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -307452703
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 6827690033066672952, guid: d54ba814449560140a61d595cfac984b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1204,6 +1205,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.39721036, y: 0.29203212}
   m_EdgeRadius: 0
+--- !u!114 &879375385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 879375379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b552921b9eab4c440acc14756a65d9fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &897654327
 GameObject:
   m_ObjectHideFlags: 0
@@ -1711,7 +1724,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1454282528
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2500,15 +2513,15 @@ SpriteRenderer:
   m_SortingLayerID: -2090124881
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7228479579958016333, guid: d4ef06c503c056748b5587eddefb2ee6, type: 3}
+  m_Sprite: {fileID: -2224474878120320963, guid: 5ed9cde9299953a48a0b8df6d7de6140, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.34, y: 0.34}
+  m_Size: {x: 0.27083334, y: 0.3125}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1815763903
@@ -2521,7 +2534,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.393, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1824915916}
@@ -2557,7 +2570,6 @@ Transform:
   m_Children:
   - {fileID: 1726801547}
   - {fileID: 1815763903}
-  - {fileID: 431246357}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1869902312
@@ -2726,6 +2738,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2019618076}
   - component: {fileID: 2019618075}
+  - component: {fileID: 2019618077}
   m_Layer: 0
   m_Name: 1 Star Restaurant Counter
   m_TagString: Untagged
@@ -2804,6 +2817,18 @@ Transform:
   - {fileID: 1733697055}
   m_Father: {fileID: 431246357}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2019618077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2019618074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b552921b9eab4c440acc14756a65d9fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2030490284
 GameObject:
   m_ObjectHideFlags: 0
@@ -3043,6 +3068,7 @@ SceneRoots:
   - {fileID: 879375381}
   - {fileID: 1824915916}
   - {fileID: 872396480}
+  - {fileID: 431246357}
   - {fileID: 981256246}
   - {fileID: 1454282531}
   - {fileID: 1110173401}

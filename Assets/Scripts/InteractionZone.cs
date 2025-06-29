@@ -2,7 +2,13 @@ using UnityEngine;
 
 public class InteractionZone : MonoBehaviour
 {
-    public GameObject keyIcon; // key icon displayed when near interaction zone area
+    [Header("Interaction Settings")]
+    public GameObject keyIconPrefab; // key icon image
+    public Vector3 keyIconOffset = new Vector3(0, 1, 0); // offset for key icon position
+    private GameObject keyIconInstance; // instance of the key icon
+
+    public delegate void PlayerInteractHandler();
+    public event PlayerInteractHandler OnPlayerInteract;
 
     private bool playerNearby = false;
 
@@ -11,7 +17,7 @@ public class InteractionZone : MonoBehaviour
     void Awake()
     {
         controls = new PlayerControls();
-        controls.Player.Interact.performed += ctx => OnInteract();
+        controls.Player.Interact.performed += ctx => TriggerInteraction();
     }
 
     void OnEnable() => controls.Enable();
@@ -21,7 +27,16 @@ public class InteractionZone : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            keyIcon.SetActive(true);
+            if (keyIconPrefab != null && keyIconInstance == null)
+            {
+                keyIconInstance = Instantiate(keyIconPrefab, transform.position + keyIconOffset, Quaternion.identity, transform);
+            }
+
+            if (keyIconInstance != null)
+            {
+                keyIconInstance.SetActive(true); 
+            }
+
             playerNearby = true;
         }
     }
@@ -30,17 +45,20 @@ public class InteractionZone : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            keyIcon.SetActive(false);
+            if (keyIconInstance != null)
+            {
+                keyIconInstance.SetActive(false);
+            }
+
             playerNearby = false;
         }
     }
-    
-    void OnInteract()
+
+    void TriggerInteraction()
     {
         if (playerNearby)
         {
-            Debug.Log("cooking mode entered!");
-            // trigger area transition or cooking logic here
+            OnPlayerInteract?.Invoke();
         }
     }
 }

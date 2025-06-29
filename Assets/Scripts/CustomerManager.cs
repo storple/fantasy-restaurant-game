@@ -9,6 +9,8 @@ public class CustomerManager : MonoBehaviour
     public Transform[] tableTargets;
     private HashSet<int> occupiedTables = new HashSet<int>();
 
+    public GameObject takeOrderPrefab; // prefab for the "take order" button icon (also could be used for other interactions, but just for now)
+
     private PlayerControls controls;
     private Transform currentCustomersParent;
 
@@ -33,13 +35,17 @@ public class CustomerManager : MonoBehaviour
         }
 
         GameObject newCustomer = new GameObject("Customer");
+
+        // render sprite
         SpriteRenderer spriteRenderer = newCustomer.AddComponent<SpriteRenderer>();
         spriteRenderer.sprite = customerSprites[Random.Range(0, customerSprites.Length)].GetComponent<SpriteRenderer>().sprite; // assign random sprite
         spriteRenderer.sortingLayerName = "Environment";
 
+        // set position and parent
         newCustomer.transform.position = spawnPoint.position;
         newCustomer.transform.SetParent(currentCustomersParent);
 
+        // assign a random unoccupied table
         int randomTableIndex;
         do
         {
@@ -47,9 +53,14 @@ public class CustomerManager : MonoBehaviour
         } while (occupiedTables.Contains(randomTableIndex));
 
         Transform randomTable = tableTargets[randomTableIndex];
+
+        // add CustomerAI component and move customer to the table
         CustomerAI customerAI = newCustomer.AddComponent<CustomerAI>();
         customerAI.MoveTo(randomTable.position, randomTableIndex);
         occupiedTables.Add(randomTableIndex);
+
+        // assign glyph prefabs
+        customerAI.takeOrderPrefab = takeOrderPrefab;
     }
 
     // method to free a table when a customer leaves or is destroyed
