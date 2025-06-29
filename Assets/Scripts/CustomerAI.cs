@@ -10,7 +10,7 @@ public class CustomerAI : MonoBehaviour
     public void MoveTo(Vector3 destination, int tableIndex)
     {
         targetPos = destination;
-        this.tableIndex = tableIndex; // Store table index
+        this.tableIndex = tableIndex; // store table index
         isWalking = true;
     }
 
@@ -32,6 +32,7 @@ public class CustomerAI : MonoBehaviour
     void SitDown()
     {
         // sit down logic and animation here
+        Debug.Log($"Customer at table {tableIndex} has sat down.");
     }
 
 
