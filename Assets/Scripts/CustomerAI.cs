@@ -22,7 +22,6 @@ public class CustomerAI : MonoBehaviour
     private GameObject interactionZone;
 
     public GameObject takeOrderPrefab;
-    private GameObject takeOrderInstance;
 
     public void MoveTo(Vector3 destination, int tableIndex)
     {
@@ -100,14 +99,10 @@ public class CustomerAI : MonoBehaviour
         Debug.Log($"Customer at table {tableIndex} is now taking order.");
         currentState = CustomerState.TakingOrder; // transition to next state
 
-        // destroy interaction zone and button icon after taking order
+        // destroy interaction zone
         if (interactionZone != null)
         {
             Destroy(interactionZone);
-        }
-        if (takeOrderInstance != null)
-        {
-            Destroy(takeOrderInstance);
         }
     }
 
