@@ -23,10 +23,19 @@ public class CustomerAI : MonoBehaviour
 
     public GameObject takeOrderPrefab;
 
+    private DishData assignedDish;
+
+    private DishManager dishManager;
+
+    void Awake()
+    {
+        dishManager = Object.FindAnyObjectByType<DishManager>();
+    }
+
     public void MoveTo(Vector3 destination, int tableIndex)
     {
         targetPos = destination;
-        this.tableIndex = tableIndex; // store table index
+        this.tableIndex = tableIndex;
         isWalking = true;
         currentState = CustomerState.WalkingIn;
     }
@@ -98,6 +107,16 @@ public class CustomerAI : MonoBehaviour
     {
         Debug.Log($"Customer at table {tableIndex} is now taking order.");
         currentState = CustomerState.TakingOrder; // transition to next state
+
+        // assign a random dish
+        if (dishManager != null)
+        {
+            assignedDish = dishManager.GetRandomDish();
+            if (assignedDish != null)
+            {
+                Debug.Log($"Assigned dish: {assignedDish.dishName}");
+            }
+        }
 
         // destroy interaction zone
         if (interactionZone != null)
