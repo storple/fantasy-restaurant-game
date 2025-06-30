@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5134ab4b2925a8540935e148fd2c36cc, type: 3}
   m_Name: Burger
   m_EditorClassIdentifier: 
-  dishName: 
-  dishIcon: {fileID: 0}
-  requiredStations: []
+  dishName: Burger
+  dishIcon: {fileID: 731375368619335737, guid: f5669e9b437f48543988668e4e0f8f11, type: 3}
+  requiredStations:
+  - stove
